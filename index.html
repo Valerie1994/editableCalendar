@@ -11,23 +11,26 @@
 		<script src="./fullcalenderJs/fullcalendar.js"></script>
 		<script>
 			$(document).ready(function () {
-				var date = new Date();
-				var d = date.getDate();
-				var m = date.getMonth();
-				var y = date.getFullYear();
+				var events = [];
+				//	TODO 拿到数据后循环加入到events中
+				events = [
+					{ title: '15/30', start: new Date("2019-09-02") },
+					{ title: '12/30', start: new Date("2019-09-08") },
+					{ title: '0/30', start: new Date("2019-09-15") },
+				]
 				$('#calendar').fullCalendar({
 					editable: false,
-					events: [
-						{ title: 'All Day Event', start: new Date(y, m, 1) },								//	基本显示方式
-						{ title: 'Long Event', start: new Date(y, m, d - 5), end: new Date(y, m, d - 2) },	//	longEvent需要有start和end
-						{ title: 'Meeting', start: new Date(y, m, d, 10, 30), allDay: false },				//	有具体时间的显示方式
-					]
+					firstDay: 1,    // 每一行从星期几开始显示，0表示星期天，1表示星期一
+					monthNames: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+					monthNamesShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+					dayNames: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+					dayNamesShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
+					events,
 				});
 			});
 		</script>
 		<style>
 			body {
-				margin-top: 40px;
 				text-align: center;
 				font-size: 14px;
 				font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
@@ -35,6 +38,19 @@
 			#calendar {
 				width: 900px;
 				margin: 0 auto;
+			}
+			.fc-event {
+				background: #e5e5e5;
+				font-size: 14px;
+				border: none;
+				padding: 12px;
+				color: #333;
+				text-align: center;
+			}
+			.fc-grid .fc-day-number {
+				font-size: 18px;
+				margin: 0 auto;
+				padding: 6px 12px;
 			}
 		</style>
 	</head>

@@ -891,7 +891,8 @@
             var n, r, a, o = Q - _.height();
             "variable" == he("weekMode") ? n = r = Math.floor(o / (1 == ee ? 2 : 6)) : (n = Math.floor(o / ee), r = o - n * (ee - 1)),
             J.each(function(e, o) {
-                ee > e && (a = t(o), a.find("> div").css("min-height", (e == ee - 1 ? r: n) - R(a)))
+                // ee > e && (a = t(o), a.find("> div").css("min-height", (e == ee - 1 ? r: n) - R(a)))
+                ee > e && (a = t(o), a.find("> div").css("min-height", "88px"))
             })
         }
         function p(t) {
@@ -2509,15 +2510,11 @@
             "": "h(:mm)t"
         },
         isRTL: !1,
-        firstDay: 0,    // 每一行从星期几开始显示，0表示星期天，1表示星期一
-        // monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-        monthNames: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
-        // monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        monthNamesShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
-        // dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        dayNames: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
-        // dayNamesShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-        dayNamesShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
+        firstDay: 0,
+        monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        dayNamesShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
         buttonText: {
             prev: "<span class='fc-text-arrow'>&lsaquo;</span>",
             next: "<span class='fc-text-arrow'>&rsaquo;</span>",
