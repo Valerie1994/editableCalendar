@@ -13,11 +13,10 @@
 			$(document).ready(function () {
 				var date = new Date();
 				var d = date.getDate();
-				console.log(d);
 				var m = date.getMonth();
 				var y = date.getFullYear();
 				$('#calendar').fullCalendar({
-					editable: true,
+					editable: false,
 					events: [
 						{ title: 'All Day Event', start: new Date(y, m, 1) },								//	基本显示方式
 						{ title: 'Long Event', start: new Date(y, m, d - 5), end: new Date(y, m, d - 2) },	//	longEvent需要有start和end

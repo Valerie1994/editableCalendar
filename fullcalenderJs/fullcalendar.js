@@ -2523,7 +2523,8 @@
             next: "<span class='fc-text-arrow'>&rsaquo;</span>",
             prevYear: "<span class='fc-text-arrow'>&laquo;</span>",
             nextYear: "<span class='fc-text-arrow'>&raquo;</span>",
-            today: "today",
+            // today: "today",
+            today: "回到本月",
             month: "month",
             week: "week",
             day: "day"
